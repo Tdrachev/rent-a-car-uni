@@ -1,0 +1,42 @@
+{
+  "vehicles": [
+    {
+      "VehicleType": 0,
+      "Vehicle": {
+        "Brand": "VW",
+        "Model": "Golf",
+        "ConstructionYear": 2000
+      },
+      "FuelType": 2,
+      "NumberOfSeats": "4",
+      "Picture": "123123",
+      "PricePerDay": 400,
+      "Count": 5,
+      "id": 1
+    }
+  ],
+  "customers": [
+    {
+      "FullName": "Ivan Ivanov",
+      "Email": "test@test.com",
+      "Phone": "123456789",
+      "id": 1
+    }
+  ],
+  "rentals": [
+    {
+      "StartDateTime": "2022-06-08",
+      "EndDateTime": "2022-06-15",
+      "VehicleId": 1,
+      "CustomerId": 1,
+      "id": 1
+    },
+    {
+      "StartDateTime": "2022-06-10",
+      "EndDateTime": "2022-06-25",
+      "VehicleId": 1,
+      "CustomerId": 1,
+      "id": 2
+    }
+  ]
+}

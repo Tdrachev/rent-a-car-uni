@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import List from "./vehicle/List";
+import CustomerList from "./customer/List";
+import Navbar from "./components/Navbar";
+import EditVehicle from "./vehicle/edit";
+import CreateVehicle from "./vehicle/create";
+import EditCustomer from "./customer/edit";
+import CreateCustomer from "./customer/create";
+import RentalList from "./rentals/List";
+import CreateRental from "./rentals/create";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="flex flex-row">
+        <Navbar />
+        <Routes>
+          <Route path="/vehicle/list" element={<List />}></Route>
+          <Route path="/vehicle/edit/" element={<EditVehicle />}></Route>
+          <Route path="/vehicle/create/" element={<CreateVehicle />}></Route>
+          <Route path="/customer/list/" element={<CustomerList />}></Route>
+          <Route path="/customer/edit/" element={<EditCustomer />}></Route>
+          <Route path="/customer/create/" element={<CreateCustomer />}></Route>
+          <Route path="/rental/list/" element={<RentalList />}></Route>
+          <Route path="/rental/create/" element={<CreateRental />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
